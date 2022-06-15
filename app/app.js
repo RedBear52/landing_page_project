@@ -22,10 +22,9 @@
  * Define Global Variables
  * 
 */
-const ele = document.getElementsByClassName('landing__container')
-console.log(ele)
-
-
+const navBar = document.getElementById('navbar__list')
+const sections = document.querySelectorAll('section')
+console.log(sections)
 
 
 /**
@@ -33,13 +32,16 @@ console.log(ele)
  * Start Helper Functions
  * 
 */
-for (let i =0; i < ele.length; i++) {
-    console.log(ele[i])
-    ele[i].addEventListener('click', function() {
-        ele[i].style.backgroundColor="pink"
-    })
-}
-
+// Iterate over 'sections' NodeLIst and return section positions
+const findActiveSection = sections.forEach(section => {
+    const position = section.getBoundingClientRect()
+    console.log(position)
+})
+// for (let i =0; i < sections.length; i++) {
+//     sections[i].addEventListener('mouseenter', function() {
+//         sections[i].style.backgroundColor="pink"
+//     })
+// }
 
 
 
