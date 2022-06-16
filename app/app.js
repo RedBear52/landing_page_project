@@ -48,7 +48,6 @@ document.addEventListener('scroll', function() {
             // styling here for now ... will need to move ALL styling to CSS 
             section.style.backgroundColor="inherit"
         } 
-        console.log(position)
     })
 })  
 
@@ -61,26 +60,23 @@ document.addEventListener('scroll', function() {
 */
 
 // build the nav
-// window.addEventListener('load', () => {
-
 function buildNavBar()  {
     sections.forEach(section => {
         // let navItemContent = document.innerHTML += `<a href="#${navItem.id}"><h3>${section.id}</h3></a>`
-        const navMenuItem = document.createElement('li')
-        navMenuItem.className = 'nav-menu__item'
-        navMenuItem.id = 'nav-menu__item--' + section.id
-        navBar.appendChild(navMenuItem).innerHTML += `<a href="#${section.id}"><h3>${section.id}</h3></a>`
+        const navMenuLink = document.createElement('li')
+        navMenuLink.className = 'menu__link'
+        navMenuLink.id = 'menu__link--' + section.id
+        navBar.appendChild(navMenuLink).innerHTML += `<a href="#${section.id}"><h3>${section.id}</h3></a>`
        })
 }
-   
 buildNavBar()
-// })
 
 
-// Add class 'active' to section when near top of viewport
 
 
 // Scroll to anchor ID using scrollTO event
+// SEE CSS for scroll-behavior: I found (after much research and experimentation with the scroll() methods) that 
+// the most elegant solution was one line of css ('scroll-behavior: smooth') added to the 'html' element.
 
 
 /**
