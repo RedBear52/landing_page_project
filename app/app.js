@@ -33,36 +33,24 @@ console.log(navBar)
  * Start Helper Functions
  * 
 */
-// const findActiveSection = sections.forEach(section => {
-//     const position = section.getBoundingClientRect()
 
-//     if (position.top <= 150 && position.bottom >= 150) {
-//         // apply active state on current section and navLink
-//         section.style.backgroundColor="pink"
-//     } else {
-//         section.style.backgroundColor="purple"
-//     }
-//     console.log(position)
-// })
-
-// document.addEventListener('scroll', findActiveSection)
-
-
-
-
+// ------'ASSIGN STATE' HELPER FUNCTION------
 document.addEventListener('scroll', function() {
    sections.forEach(section => {
-    const position = section.getBoundingClientRect()
-        
-        if (position.top <= 150 && position.bottom >= 150) {
+    const position = section.getBoundingClientRect() 
+        if (position.top <= 145 && position.bottom >= 150) {
             // apply active state on current section and navLink
-            section.style.backgroundColor="pink"
+            section.className='active-section'
+            // styling here for now ... will need to move ALL styling to CSS 
+            section.style.backgroundColor="maroon"
         } else {
-            section.style.backgroundColor="purple"
-        }
+            section.className='not-so-active-section'
+            // styling here for now ... will need to move ALL styling to CSS 
+            section.style.backgroundColor="inherit"
+        } 
         console.log(position)
     })
-})
+})  
 
 
 
