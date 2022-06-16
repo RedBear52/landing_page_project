@@ -25,6 +25,7 @@
 const navBar = document.getElementById('navbar__list')
 const sections = document.querySelectorAll('section')
 console.log(sections)
+console.log(navBar)
 
 
 /**
@@ -32,16 +33,36 @@ console.log(sections)
  * Start Helper Functions
  * 
 */
-// Iterate over 'sections' NodeLIst and return section positions
-const findActiveSection = sections.forEach(section => {
+// const findActiveSection = sections.forEach(section => {
+//     const position = section.getBoundingClientRect()
+
+//     if (position.top <= 150 && position.bottom >= 150) {
+//         // apply active state on current section and navLink
+//         section.style.backgroundColor="pink"
+//     } else {
+//         section.style.backgroundColor="purple"
+//     }
+//     console.log(position)
+// })
+
+// document.addEventListener('scroll', findActiveSection)
+
+
+
+
+document.addEventListener('scroll', function() {
+   sections.forEach(section => {
     const position = section.getBoundingClientRect()
-    if (position.top && position.left <= )
+        
+        if (position.top <= 150 && position.bottom >= 150) {
+            // apply active state on current section and navLink
+            section.style.backgroundColor="pink"
+        } else {
+            section.style.backgroundColor="purple"
+        }
+        console.log(position)
+    })
 })
-// for (let i =0; i < sections.length; i++) {
-//     sections[i].addEventListener('mouseenter', function() {
-//         sections[i].style.backgroundColor="pink"
-//     })
-// }
 
 
 
