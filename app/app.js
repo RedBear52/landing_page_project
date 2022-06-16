@@ -66,10 +66,10 @@ document.addEventListener('scroll', function() {
 function buildNavBar()  {
     sections.forEach(section => {
         // let navItemContent = document.innerHTML += `<a href="#${navItem.id}"><h3>${section.id}</h3></a>`
-        const navItem = document.createElement('li')
-        navItem.className = 'nav-menu__item'
-        navItem.id = section.id
-        navBar.appendChild(navItem).innerHTML += `<a href="#${navItem.id}"><h3>${section.id}</h3></a>`
+        const navMenuItem = document.createElement('li')
+        navMenuItem.className = 'nav-menu__item'
+        navMenuItem.id = 'nav-menu__item--' + section.id
+        navBar.appendChild(navMenuItem).innerHTML += `<a href="#${section.id}"><h3>${section.id}</h3></a>`
        })
 }
    
