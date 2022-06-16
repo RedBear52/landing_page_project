@@ -61,6 +61,20 @@ document.addEventListener('scroll', function() {
 */
 
 // build the nav
+// window.addEventListener('load', () => {
+
+function buildNavBar()  {
+    sections.forEach(section => {
+        // let navItemContent = document.innerHTML += `<a href="#${navItem.id}"><h3>${section.id}</h3></a>`
+        const navItem = document.createElement('li')
+        navItem.className = 'nav-menu__item'
+        navItem.id = section.id
+        navBar.appendChild(navItem).innerHTML += `<a href="#${navItem.id}"><h3>${section.id}</h3></a>`
+       })
+}
+   
+buildNavBar()
+// })
 
 
 // Add class 'active' to section when near top of viewport
