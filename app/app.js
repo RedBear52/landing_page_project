@@ -35,7 +35,7 @@ console.log(sections)
 // Iterate over 'sections' NodeLIst and return section positions
 const findActiveSection = sections.forEach(section => {
     const position = section.getBoundingClientRect()
-    console.log(position)
+    if (position.top && position.left <= )
 })
 // for (let i =0; i < sections.length; i++) {
 //     sections[i].addEventListener('mouseenter', function() {
