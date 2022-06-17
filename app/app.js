@@ -37,21 +37,17 @@ console.log(navBar)
 // ------'ASSIGN STATE' HELPER FUNCTION------
 document.addEventListener('scroll', function() {
    sections.forEach(section => {
+    let activeLink = navBar.querySelector(`[data-nav=${section.id}]`)
     const position = section.getBoundingClientRect() 
         if (position.top <= 145 && position.bottom >= 150) {
-            // apply active state on current section and navLink
-            section.className='active'
-            // styling here for now ... will need to move ALL styling to CSS 
-            // section.style.backgroundColor="maroon"
+            section.className = 'active'
+            activeLink.classList = 'active'
         } else {
             section.className='not-so-active'
-            // styling here for now ... will need to move ALL styling to CSS 
-            // section.style.backgroundColor="inherit"
+            activeLink.classList = 'menu__link'
         } 
     })
 })  
-
-
 
 /**
  * End Helper Functions
@@ -62,11 +58,18 @@ document.addEventListener('scroll', function() {
 // build the nav
 function buildNavBar()  {
     sections.forEach(section => {
-        // let navItemContent = document.innerHTML += `<a href="#${navItem.id}"><h3>${section.id}</h3></a>`
         const navMenuLink = document.createElement('li')
         navMenuLink.className = 'menu__link'
         navMenuLink.id = 'menu__link--' + section.id
-        navBar.appendChild(navMenuLink).innerHTML += `<a href="#${section.id}"><h3>${section.id.toUpperCase()}</h3></a>`
+        navMenuLink.setAttribute('data-nav', section.id)
+        navBar.appendChild(navMenuLink).innerHTML += 
+        ` 
+        <a href="#${section.id}">
+            <button>
+                <h3>${section.id.toUpperCase()}</h3>
+            </button>
+        </a>
+        `
        })
 }
 buildNavBar()

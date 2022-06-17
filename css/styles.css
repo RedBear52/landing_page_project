@@ -35,6 +35,11 @@ body {
     color: #fff;
 }
 
+button {
+    color: #000d3c;
+    margin: 0;
+}
+
 
 /* Typeography General*/
 h1 {
@@ -58,7 +63,7 @@ h2 {
 }
 
 h3 {
-    color: #000d3c;
+    /* color: #000d3c; */
     text-decoration: none;
 }
 
@@ -98,18 +103,16 @@ section {
     margin-left: 2em;
 }
 
-.navbar__menu .menu__link {
+.navbar__menu .menu__link button {
     display: block;
-    /* padding: 1em; */
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 16px;
-
-    /* color: #30a139; */
+    min-height: 100%;
+    margin-bottom: none;
+    border: none;
+    background-color: #fff;
 }
 
-.navbar__menu .menu__link:hover {
-    background: #93ddff;
+.navbar__menu .menu__link button:hover {
+    color: rgb(204 204 17);
     transition: ease 0.5s all;
 }
 
@@ -225,7 +228,7 @@ section.active {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-section.active .landing__container::before {
+section.not-so-active .landing__container::before {
     opacity: 1;
     animation: rotate 4s linear 0s infinite forwards;
 }
