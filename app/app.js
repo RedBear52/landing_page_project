@@ -40,13 +40,13 @@ document.addEventListener('scroll', function() {
     const position = section.getBoundingClientRect() 
         if (position.top <= 145 && position.bottom >= 150) {
             // apply active state on current section and navLink
-            section.className='active-section'
+            section.className='active'
             // styling here for now ... will need to move ALL styling to CSS 
-            section.style.backgroundColor="maroon"
+            // section.style.backgroundColor="maroon"
         } else {
-            section.className='not-so-active-section'
+            section.className='not-so-active'
             // styling here for now ... will need to move ALL styling to CSS 
-            section.style.backgroundColor="inherit"
+            // section.style.backgroundColor="inherit"
         } 
     })
 })  
@@ -66,7 +66,7 @@ function buildNavBar()  {
         const navMenuLink = document.createElement('li')
         navMenuLink.className = 'menu__link'
         navMenuLink.id = 'menu__link--' + section.id
-        navBar.appendChild(navMenuLink).innerHTML += `<a href="#${section.id}"><h3>${section.id}</h3></a>`
+        navBar.appendChild(navMenuLink).innerHTML += `<a href="#${section.id}"><h3>${section.id.toUpperCase()}</h3></a>`
        })
 }
 buildNavBar()
