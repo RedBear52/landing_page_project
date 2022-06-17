@@ -24,12 +24,9 @@
 */
 const navBar = document.getElementById('navbar__list')
 const sections = document.querySelectorAll('section')
-console.log(sections)
-console.log(navBar)
-
 
 /**
- * End Global Variables
+ * End Global Variabless
  * Start Helper Functions
  * 
 */
@@ -61,11 +58,11 @@ function buildNavBar()  {
         const navMenuLink = document.createElement('li')
         navMenuLink.className = 'menu__link'
         navMenuLink.id = 'menu__link--' + section.id
-        navMenuLink.setAttribute('data-nav', section.id)
+        // navMenuLink.setAttribute('data-nav', section.id)
         navBar.appendChild(navMenuLink).innerHTML += 
         ` 
         <a href="#${section.id}">
-            <button>
+            <button data-nav="${section.id}">
                 <h3>${section.id.toUpperCase()}</h3>
             </button>
         </a>

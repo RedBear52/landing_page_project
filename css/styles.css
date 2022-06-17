@@ -22,9 +22,7 @@ html {
 }
 
 a {
-    font-family: 'Oxygen', Sans-Serif;
     text-decoration: none;
-    color: red;
 }
 
 body {
@@ -38,6 +36,12 @@ body {
 button {
     color: #000d3c;
     margin: 0;
+    padding: 2em, 0;
+}
+
+button.active {
+    color: rgb(204, 204, 17);
+    ;
 }
 
 
@@ -63,7 +67,6 @@ h2 {
 }
 
 h3 {
-    /* color: #000d3c; */
     text-decoration: none;
 }
 
@@ -102,6 +105,8 @@ section {
     display: inline-block;
     margin-left: 2em;
 }
+
+
 
 .navbar__menu .menu__link button {
     display: block;
@@ -225,7 +230,7 @@ section:nth-of-type(3n + 1) .landing__container::after {
 
 section.active {
     background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(204, 204, 17, 0.7) 100%);
 }
 
 section.not-so-active .landing__container::before {
@@ -237,10 +242,6 @@ section.active .landing__container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
-
-
-
-
 
 
 /* Section Active Styles Keyframe Animations */
