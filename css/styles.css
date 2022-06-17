@@ -21,9 +21,15 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    font-family: 'Oxygen', Sans-Serif;
+    text-decoration: none;
+    color: red;
+}
+
 body {
     background: rgb(136,203,171);
-    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, #000d3c 100%);
     margin: 0;
     font-family: 'Merriweather', serif;
     color: #fff;
@@ -31,11 +37,6 @@ body {
 
 
 /* Typeography General*/
-a {
-    color: rgba(70, 130, 180);
-    text-decoration: none;
-}
-
 h1 {
     font-family: 'Fira Sans', sans-serif;
     font-size: 3em;
@@ -54,6 +55,11 @@ h2 {
     font-family: 'Oxygen', Sans-Serif;
     font-size: 3em;
     color: #fff;
+}
+
+h3 {
+    color: #000d3c;
+    text-decoration: none;
 }
 
 p {
@@ -89,21 +95,22 @@ section {
 
 .navbar__menu li {
     display: inline-block;
-    margin-left: 1em;
+    margin-left: 2em;
 }
 
 .navbar__menu .menu__link {
     display: block;
-    padding: 1em;
+    /* padding: 1em; */
     font-weight: bold;
     text-decoration: none;
+    border-radius: 16px;
+
     /* color: #30a139; */
 }
 
 .navbar__menu .menu__link:hover {
-    background: #333;
-    color: #fff;
-    transition: ease 0.3s all;
+    background: #93ddff;
+    transition: ease 0.5s all;
 }
 
 /* Header Styles */
@@ -195,7 +202,7 @@ section:nth-of-type(3n) .landing__container::after {
 
 section:nth-of-type(3n + 1) .landing__container::after {
     content: '';
-    background: rgb(255,255,255);
+    background: #ffffff;
     background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
     position: absolute;
     right: 20vw;
@@ -212,13 +219,6 @@ section:nth-of-type(3n + 1) .landing__container::after {
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
-.active {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.not-so-active {
-    /* opacity: 0.7; */
-}
 
 section.active {
     background: rgb(0, 0, 0);
@@ -233,7 +233,9 @@ section.active .landing__container::before {
 section.active .landing__container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
-} 
+}
+
+
 
 
 
