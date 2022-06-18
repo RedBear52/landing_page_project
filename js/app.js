@@ -5,6 +5,7 @@
 */
 const navBar = document.getElementById('navbar__list')
 const sections = document.querySelectorAll('section')
+const fullVisibleNavBar = document.querySelector('.page__header')
 
 /**
  * End Global Variabless
@@ -13,26 +14,27 @@ const sections = document.querySelectorAll('section')
 */
 
 // ----Hide Scroll Bar ---- //
+/* Hide navBar when user scrolls down*/
+
+
+ 
 
     
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-// let prevScrollpos = window.scrollY;
-// window.onscroll = function() {
-//   let currentScrollPos = window.scrollY;
-// console.log(currentScrollPos)
 
-//   if (prevScrollpos > currentScrollPos) {
-//     let visibleBar = document.getElementsByClassName('.page__header')
-//     visibleBar.className = 'active'
-//   } else if (prevScrollpos > currentScrollPos) { 
-//     visibleBar.className = 'not-so-active'
-
-//   }
-//   prevScrollpos = currentScrollPos;
-// }  
-// console.log(prevScrollpos)
 
 // ------'ASSIGN STATE' HELPER FUNCTION------
+let prevScrollPosistion = window.scrollY
+
+window.addEventListener('scroll', () => {
+    if (prevScrollPosistion < window.scrollY) {
+        fullVisibleNavBar.classList.add('invisible-navbar')
+    } else {
+        fullVisibleNavBar.classList.remove('invisible-navbar')
+    }
+    prevScrollPosistion = window.scrollY
+})
+
+
 document.addEventListener('scroll', function() {
    sections.forEach(section => {
     let activeLink = navBar.querySelector(`[data-nav=${section.id}]`)

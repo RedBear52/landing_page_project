@@ -94,7 +94,6 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
-
 .navbar__menu.active {
    display: none;
 }
@@ -109,8 +108,6 @@ section {
     display: inline-block;
     margin-left: 2em;
 }
-
-
 
 .navbar__menu .menu__link button {
     display: block;
@@ -133,8 +130,12 @@ section {
     left: 0;
     width: 100%;
     z-index: 5;
-    /* transform: translateY(-70px);
-    transition: ease 0.2s; */
+    transition: ease 0.5s; 
+}
+
+.page__header.invisible-navbar {
+    transform: translateY(-75px);
+    transition: ease 0.5s;
 }
 
 /* Footer Styles */
