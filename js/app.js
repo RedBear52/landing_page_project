@@ -1,22 +1,3 @@
-/**
- * 
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
- * 
- * Dependencies: None
- * 
- * JS Version: ES2015/ES6
- * 
- * JS Standard: ESlint
- * 
-*/
-
-/**
- * Comments should be present at the beginning of each procedure and class.
- * Great to have comments before crucial code sections within the procedure.
-*/
 
 /**
  * Define Global Variables
@@ -30,6 +11,26 @@ const sections = document.querySelectorAll('section')
  * Start Helper Functions
  * 
 */
+
+// ----Hide Scroll Bar ---- //
+
+    
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+// let prevScrollpos = window.scrollY;
+// window.onscroll = function() {
+//   let currentScrollPos = window.scrollY;
+// console.log(currentScrollPos)
+
+//   if (prevScrollpos > currentScrollPos) {
+//     let visibleBar = document.getElementsByClassName('.page__header')
+//     visibleBar.className = 'active'
+//   } else if (prevScrollpos > currentScrollPos) { 
+//     visibleBar.className = 'not-so-active'
+
+//   }
+//   prevScrollpos = currentScrollPos;
+// }  
+// console.log(prevScrollpos)
 
 // ------'ASSIGN STATE' HELPER FUNCTION------
 document.addEventListener('scroll', function() {
@@ -71,12 +72,6 @@ function buildNavBar()  {
 }
 buildNavBar()
 
-
-
-
-// Scroll to anchor ID using scrollTO event
-// SEE CSS for scroll-behavior: I found (after much research and experimentation with the scroll() methods) that 
-// the most elegant solution was one line of css ('scroll-behavior: smooth') added to the 'html' element.
 
 
 /**

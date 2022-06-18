@@ -95,6 +95,10 @@ section {
 
 /* Navigation Styles*/
 
+.navbar__menu.active {
+   display: none;
+}
+
 .navbar__menu ul {
     display: flex;
     padding-left: 0;
@@ -129,6 +133,8 @@ section {
     left: 0;
     width: 100%;
     z-index: 5;
+    /* transform: translateY(-70px);
+    transition: ease 0.2s; */
 }
 
 /* Footer Styles */
@@ -258,15 +264,16 @@ section.active .landing__container::after {
 
 /*---- Media Queries ---- */
 @media (max-width: 560px) {
-    .navbar__menu li {
-        display: inline-block;
-        margin-left: 0;
-    }
-    
     .navbar__menu ul {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
     }
-} 
+
+    .navbar__menu li {
+        margin: 1em;
+        margin-bottom: 0;
+    } 
+  
+   
+    h3 {
+        font-size: 1em;
+    }
+}  
