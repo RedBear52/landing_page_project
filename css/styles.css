@@ -94,9 +94,9 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
-.navbar__menu.active {
+/* .navbar__menu.active {
    display: none;
-}
+} */
 
 .navbar__menu ul {
     display: flex;
@@ -133,11 +133,6 @@ section {
     transition: ease 0.5s; 
 }
 
-.page__header.invisible-navbar {
-    transform: translateY(-75px);
-    transition: ease 0.5s;
-}
-
 /* Footer Styles */
 .page__footer {
     background: #000;
@@ -155,6 +150,11 @@ section {
 .landing__container {
     padding: 1em;
     text-align: left;
+}
+
+.page__header.invisible-navbar {
+    transform: translateY(-75px);
+    transition: ease 0.4s;
 }
 
 @media only screen and (min-width: 35em){

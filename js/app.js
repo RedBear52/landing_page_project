@@ -39,7 +39,8 @@ document.addEventListener('scroll', function() {
    sections.forEach(section => {
     let activeLink = navBar.querySelector(`[data-nav=${section.id}]`)
     const position = section.getBoundingClientRect() 
-        if (position.top <= 145 && position.bottom >= 150) {
+        if (position.top <= 185
+             && position.bottom >= 150) {
             section.className = 'active'
             activeLink.classList = 'active'
         } else {
