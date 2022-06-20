@@ -60,7 +60,7 @@ h1 {
 }
 
 h2 {
-    border-bottom: 1px solid #cc1;
+    border-bottom: 1px solid rgb(204, 204, 17);
     font-family: 'Oxygen', Sans-Serif;
     font-size: 3em;
     color: #fff;
@@ -233,9 +233,17 @@ section:nth-of-type(3n + 1) .landing__container::after {
 
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
+header.active {
+    color: rgb(204, 204, 17);
+}
+
 section.active {
     background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(204, 204, 17, 0.7) 100%);
+    background: linear-gradient(0deg, rgba(1, 222, 252, 0.3) 0%, rgba(204, 204, 17, 0.7) 100%);
+}
+
+section.not-so-active {
+    opacity: 0.3;
 }
 
 section.not-so-active .landing__container::before {

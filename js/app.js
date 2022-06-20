@@ -6,6 +6,7 @@
 const navBar = document.getElementById('navbar__list')
 const sections = document.querySelectorAll('section')
 const fullVisibleNavBar = document.querySelector('.page__header')
+const initialActiveSect = document.querySelector('[data-nav=main__hero]')
 
 /**
  * End Global Variabless
@@ -23,6 +24,7 @@ const fullVisibleNavBar = document.querySelector('.page__header')
 
 
 // ------'ASSIGN STATE' HELPER FUNCTION------
+
 let prevScrollPosistion = window.scrollY
 
 window.addEventListener('scroll', () => {
@@ -40,14 +42,14 @@ document.addEventListener('scroll', function() {
     let activeLink = navBar.querySelector(`[data-nav=${section.id}]`)
     const position = section.getBoundingClientRect() 
         if (position.top <= 185
-             && position.bottom >= 150) {
+            && position.bottom >= 185) {
             section.className = 'active'
             activeLink.classList = 'active'
         } else {
             section.className='not-so-active'
             activeLink.classList = 'menu__link'
         } 
-    })
+    }) 
 })  
 
 /**
