@@ -1,73 +1,55 @@
-
-/**
- * Define Global Variables
- * 
-*/
+// -----Global Variables----- //
 const navBar = document.getElementById('navbar__list')
 const sections = document.querySelectorAll('section')
 const fullVisibleNavBar = document.querySelector('.page__header')
 
-/**
- * End Global Variabless
- * Start Helper Functions
- * 
-*/
-
-// ----Hide Scroll Bar ---- //
-/* Hide navBar when user scrolls down*/
-
-// ------'ASSIGN STATE' HELPER FUNCTION------
-
-let prevScrollPosistion = window.scrollY
+/*---FUNCTIONS---*/ 
+// -----Hide NavBar on Scroll Down----- //
+function hideNavBar() {
+    let prevScrollPosistion = window.scrollY
 
 window.addEventListener('scroll', () => {
     if (prevScrollPosistion < window.scrollY) {
         fullVisibleNavBar.classList.add('invisible-navbar')
-    } else {
-        fullVisibleNavBar.classList.remove('invisible-navbar')
-    }
-    prevScrollPosistion = window.scrollY
-})
-
-
-document.addEventListener('scroll', function() {
-   sections.forEach(section => {
-    const activeLink = navBar.querySelector(`[data-nav=${section.id}]`)
-    const position = section.getBoundingClientRect() 
-        if (position.top <= 185
-            && position.bottom >= 185) {
-            section.className = 'active'
-            activeLink.classList = 'active'
         } else {
-            section.className = 'not-so-active'
-            activeLink.classList = 'menu__link'
-        } 
-    return arrowHandler(section)
-    }) 
-})  
+            fullVisibleNavBar.classList.remove('invisible-navbar')
+        }
+        prevScrollPosistion = window.scrollY
+    })
+}
 
-function arrowHandler(section) {
+//------'Asign Active/Inactive State to Relevant Elements ------//
+function assignState() {
     document.addEventListener('scroll', function() {
-        // const section = document.querySelectorAll('section')
+        sections.forEach(section => {
+         const activeLink = navBar.querySelector(`[data-nav=${section.id}]`)
+         const position = section.getBoundingClientRect() 
+             if (position.top <= 185
+                 && position.bottom >= 185) {
+                 section.className = 'active'
+                 activeLink.classList = 'active'
+             } else {
+                 section.className = 'not-so-active'
+                 activeLink.classList = 'menu__link'
+             } 
+         }) 
+     }) 
+}
+
+function arrowHandler() {
+    document.addEventListener('scroll', function() {
         const setArrowState = document.getElementById('arrow-icon')
-        if (section.className != 'active' && section.id != 'section1') {
+        const position = setArrowState.getBoundingClientRect()
+        if (position.top >= 185) {
             setArrowState.className = 'active'
         } else {
             setArrowState.className = 'not-so-active'
         }
-        console.log(section.id, section.className)
+        console.log(position)
     })
 }
-// arrowHandler()
 
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-
-// build the nav
+//----- Dynamically Create NavigationBar/Menu -----//
 function buildNavBar()  {
     sections.forEach(section => {
         const navMenuLink = document.createElement('li')
@@ -83,20 +65,9 @@ function buildNavBar()  {
         `
        })
 }
+
+//----- Function Invocations -----//
+hideNavBar()
+assignState()
+arrowHandler()
 buildNavBar()
-
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
-
-

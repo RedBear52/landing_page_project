@@ -1,24 +1,9 @@
-/*
- *
- * CSS written based on SMACSS architecture.
- * To learn more, visit: http://smacss.com/
- * 
- * For simplicity, no reset or normalize is added. 
- * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
- *
-*/
-
-/* -----Color Palette-----
-:root {
-    --clr-steelBlue: rgba(70, 130, 180)
-
-} */
-
 /* ---- Base Rules ---- */
 html {
     /* using this single line of css('scroll-behavior') instead of multiple lines of js logic
     to accomodate scrolling...  */
     scroll-behavior: smooth;
+    min-width: 375px;
 }
 
 a {
@@ -43,7 +28,6 @@ button.active {
     color: rgb(204, 204, 17);
     ;
 }
-
 
 /* Typeography General*/
 h1 {
@@ -80,6 +64,10 @@ main {
     margin: 10vh 1em 10vh;
 }
 
+nav {
+    display: flex;
+}
+
 .main-hero {
     min-height: 40vh;
     padding-top: 3em;
@@ -93,12 +81,10 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
-/* .navbar__menu.active {
-   display: none;
-} */
 #arrow-icon {
     transform: scaleY(-1);
     color: rgb(155, 206, 74);
+    transition: ease 0.4s;
 }
 
 .navbar__menu ul {
@@ -118,6 +104,13 @@ section {
     margin-bottom: none;
     border: none;
     background-color: #fff;
+   
+}
+
+@media (max-width: 450px) {
+    nav {
+        max-width: 2em;;
+    }
 }
 
 .navbar__menu .menu__link button:hover {
@@ -146,7 +139,6 @@ section {
 .page__footer p{
     color: #fff;
 }
-
 
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
@@ -233,12 +225,6 @@ section:nth-of-type(3n + 1) .landing__container::after {
     transition: ease 0.5s all;
 }
 
-
-/* ---- Theme State Rules ---- */
-/* Section Active Styles */
-/* header.active {
-    color: rgb(204, 204, 17);
-} */
 #arrow-icon.active {
     opacity: 1;
 }
@@ -305,9 +291,6 @@ section.active .landing__container::after {
 
 /*---- Media Queries ---- */
 @media (max-width: 560px) {
-    .navbar__menu ul {
-    }
-
     .navbar__menu li {
         margin: 1em;
         margin-bottom: 0;
@@ -316,5 +299,17 @@ section.active .landing__container::after {
    
     h3 {
         font-size: 1em;
+    }
+}  
+
+@media (max-width: 450px) {
+    .navbar__menu li {
+        margin: 1em;
+        margin-bottom: 0;
+    } 
+  
+   
+    h3 {
+        font-size: 0.75em;
     }
 }  
