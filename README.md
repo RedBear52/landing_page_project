@@ -4,7 +4,7 @@
 This project starts with a multi-section landing page.
 It is the second project in **Udacity's Front End Developer** nanodegree program.
 The programmer is then challenged to dynamically add elements and data to the DOM using vanilla javascript.
-Additionally, highlighting and other helpful styling to make the user experience more enjoyable and cohesive.
+Additionally, highlighting and other helpful styling is added in order to make the user experience more enjoyable and cohesive.
 Ideally, this project accelerates the participant's ability to blend a knowledge of HTML, CSS and Javascript in common real-world use cases.
 
 # Table of Contents
