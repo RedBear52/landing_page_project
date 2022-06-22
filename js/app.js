@@ -7,13 +7,12 @@ const fullVisibleNavBar = document.querySelector('.page__header')
 // -----Hide NavBar on Scroll Down----- //
 function hideNavBar() {
     let prevScrollPosistion = window.scrollY
-
-window.addEventListener('scroll', () => {
-    if (prevScrollPosistion < window.scrollY) {
-        fullVisibleNavBar.classList.add('invisible-navbar')
-        } else {
-            fullVisibleNavBar.classList.remove('invisible-navbar')
-        }
+    window.addEventListener('scroll', () => {
+        if (prevScrollPosistion < window.scrollY) {
+            fullVisibleNavBar.classList.add('invisible-navbar')
+            } else {
+                fullVisibleNavBar.classList.remove('invisible-navbar')
+            }
         prevScrollPosistion = window.scrollY
     })
 }
@@ -45,7 +44,6 @@ function arrowHandler() {
         } else {
             setArrowState.className = 'not-so-active'
         }
-        console.log(position)
     })
 }
 
@@ -63,7 +61,7 @@ function buildNavBar()  {
             </button>
         </a>
         `
-       })
+    })
 }
 
 //----- Function Invocations -----//
