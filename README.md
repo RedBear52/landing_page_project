@@ -13,7 +13,7 @@ Ideally, this project accelerates the participant's ability to blend a knowledge
 -[Table of contents][#table-of-contents]
 -[Installation][#installation]
 -[Usage][#usage]
--[L[icense][#license]
+-[License][#license]
 -[Footer][#footer]
 
 # Installation
