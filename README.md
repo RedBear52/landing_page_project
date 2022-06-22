@@ -18,7 +18,7 @@ Ideally, this project accelerates the participant's ability to blend a knowledge
 
 # Installation
 [(Back to Table of Contents)](#table-of-contents)
-To experiment use this project, first clone the repo via the shell with the following command:
+To experiment with the code in this project, first clone the repo via the shell with the following command:
 
 ```git init```
 
@@ -41,7 +41,7 @@ The author (me) allows you to use this code as a reference and a leanring tool. 
 
 Copyright (c) 2022 Ryan Spearman
 
-# MIT License
+## MIT License
 
 Permission is hereby freely granted to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
