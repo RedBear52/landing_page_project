@@ -8,13 +8,13 @@ Additionally, highlighting and other helpful styling is added in order to make t
 Ideally, this project accelerates the participant's ability to blend a knowledge of HTML, CSS and Javascript in common real-world use cases.
 
 # Table of Contents
-- [Project Title][#landing-page]
-- [Demo-Explanation][#demo-explanation]
-- [Table of contents][#table-of-contents]
-- [Installation][#installation]
-- [Usage][#usage]
-- [License][#license]
-- [Footer][#footer]
+- [Project Title](#landing-page)
+- [Demo-Explanation](#demo-explanation)
+- [Table of contents](#table-of-contents)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Footer](#footer)
 
 # Installation
 [(Back to Table of Contents)](#table-of-contents)
