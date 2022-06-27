@@ -1,8 +1,5 @@
 /* ---- Base Rules ---- */
 html {
-    /* using this single line of css('scroll-behavior') instead of multiple lines of js logic
-    to accomodate scrolling...  */
-    scroll-behavior: smooth;
     min-width: 375px;
 }
 
@@ -26,7 +23,6 @@ button {
 
 button.active {
     color: rgb(204, 204, 17);
-    ;
 }
 
 /* Typeography General*/
@@ -52,6 +48,8 @@ h2 {
 
 h3 {
     text-decoration: none;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 p {
@@ -95,7 +93,7 @@ section {
 
 .navbar__menu li {
     display: inline-block;
-    margin-left: 2em;
+    /* margin-left: 2em; */
 }
 
 .navbar__menu .menu__link button {
@@ -114,7 +112,13 @@ section {
 }
 
 .navbar__menu .menu__link button:hover {
-    color: rgb(204 204 17);
+    color: rgb(107, 156, 133);
+    transition: ease 0.2s all;
+}
+
+.navbar__menu .menu__link button.active {
+    background-color: rgb(107, 156, 133);
+    color: #fff;
     transition: ease 0.5s all;
 }
 

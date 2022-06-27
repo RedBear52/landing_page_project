@@ -35,6 +35,16 @@ function assignState() {
      }) 
 }
 
+function scrollToSection() {
+navBar.addEventListener('click', function(event) {
+    event.preventDefault()
+    const clickedEle = event.target
+    const sectionName = clickedEle.getAttribute('data-nav')
+    const sectionId = document.getElementById(`${sectionName}`)
+    sectionId.scrollIntoView({behavior: 'smooth'})
+    })
+}
+
 function arrowHandler() {
     document.addEventListener('scroll', function() {
         const setArrowState = document.getElementById('arrow-icon')
@@ -54,18 +64,17 @@ function buildNavBar()  {
         navMenuLink.className = 'menu__link'
         navMenuLink.id = 'menu__link--' + section.id
         navBar.appendChild(navMenuLink).innerHTML += 
-        ` 
-        <a href="#${section.id}">
+        `   
             <button data-nav="${section.id}">
-                <h3>${section.id.toUpperCase()}</h3>
+                <h3 data-nav="${section.id}">${section.id.toUpperCase()}</h3>
             </button>
-        </a>
         `
     })
 }
 
 //----- Function Invocations -----//
+arrowHandler()
 hideNavBar()
 assignState()
-arrowHandler()
+scrollToSection()
 buildNavBar()
