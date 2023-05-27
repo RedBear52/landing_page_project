@@ -23,6 +23,8 @@ To experiment with the code in this project, first clone the repo via the shell 
 
 ```git clone https://github.com/RedBear52/landingPageProject-Udacity.git```
 
+Open the index.html page in your browser to observe the design functionality.
+
 # Usage
 [(Back to Table of Contents)](#table-of-contents)
 Best used as a learning tool to practice and improve your own understanding of multi-section page layout and dynamically populating elements/data to the DOM using HTML, CSS and Javascript.
